@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="mainViewModel_xml"
+            type="com.example.databinding.MainViewModel" />
     </data>
 
     <RelativeLayout
@@ -16,13 +19,15 @@
             android:id="@+id/data_Show_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/submit_data_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
             android:hint="Enter Input"
-            android:textStyle="bold|italic"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@+id/submit_data_button"
-            android:layout_marginBottom="50dp">
+            android:textStyle="bold|italic"
+            android:text="@{mainViewModel_xml.quoteLiveData}"
+            >
         </TextView>
 
         <Button
@@ -30,6 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:onClick="@{()->mainViewModel_xml.upateQuoteData()}"
             android:text="OK"></Button>
     </RelativeLayout>
 </layout>

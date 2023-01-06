@@ -5,8 +5,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.databinding.databinding.ActivityMainBinding
-
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
     lateinit var viewModel: MainViewModel
@@ -17,11 +15,28 @@ class MainActivity : AppCompatActivity() {
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel=ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.quoteLiveData.observe(this, Observer {
-            binding.dataShowTextView.text=it
-        })
-        binding.submitDataButton.setOnClickListener(){
-            viewModel.upateQuoteData()
-        }
+        /**
+         * Comment this part as we are handling lifecycleOwner directly.
+         * i.e binding.lifecycleOwner=this
+         */
+//        viewModel.quoteLiveData.observe(this, Observer {
+//            binding.dataShowTextView.text=it
+//        })
+
+
+        /**
+         * Comment this part as we are handling on click directily from the XML
+         */
+//        binding.submitDataButton.setOnClickListener(){
+//            viewModel.upateQuoteData()
+//        }
+        /**
+         * Assigining it directly from XML the onclick
+         */
+        binding.mainViewModelXml=viewModel
+        /***
+         * need to assign lifeCycle Ownwer
+         */
+        binding.lifecycleOwner=this
     }
 }
