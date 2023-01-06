@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel=ViewModelProvider(this).get(MainViewModel::class.java)
         binding.mainViewModelXml=viewModel
+        /**
+         * Live Data will send data only to the activity who are in active state.
+         * We need to tell the binding agent/Set the binding agent that Live data for that we need to set the lifecycleOwner
+         */
         binding.lifecycleOwner=this
     }
 }
