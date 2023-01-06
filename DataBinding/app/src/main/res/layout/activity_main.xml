@@ -26,9 +26,19 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold|italic"
-            android:text="@{mainViewModel_xml.quoteLiveData}"
-            >
+            android:text="@{mainViewModel_xml.quoteLiveData}">
         </TextView>
+
+        <EditText
+            android:id="@+id/data_enter_EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:layout_above="@+id/data_Show_textView"
+            android:text="@={mainViewModel_xml.quoteLiveData}"
+            >
+        </EditText>
 
         <Button
             android:id="@+id/submit_data_button"

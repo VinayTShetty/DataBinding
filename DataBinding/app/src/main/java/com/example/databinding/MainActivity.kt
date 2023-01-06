@@ -20,3 +20,9 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner=this
     }
 }
+
+/**
+ * Two way Binding.
+ *   android:text="@={mainViewModel_xml.quoteLiveData}"
+ *   Need to use = in the XML.
+ */
