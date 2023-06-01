@@ -26,3 +26,9 @@ class MainActivity : AppCompatActivity() {
  *   android:text="@={mainViewModel_xml.quoteLiveData}"
  *   Need to use = in the XML.
  */
+/**
+ *  Resources:- Cheezy Code.
+ *  https://www.youtube.com/watch?v=9lCIocQ76CI&list=PLRKyZvuMYSIO0jLgj8g6sADnD0IBaWaw2&index=7
+ *  https://www.youtube.com/watch?v=TVlpENKIg2A&list=PLRKyZvuMYSIO0jLgj8g6sADnD0IBaWaw2&index=8
+ *  https://www.youtube.com/watch?v=XfdaOpQ4UbI&list=PLRKyZvuMYSIO0jLgj8g6sADnD0IBaWaw2&index=9
+ */
