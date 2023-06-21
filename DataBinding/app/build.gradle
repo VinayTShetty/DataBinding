@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -30,6 +31,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    /**
+     * Enable Data Binding Feature
+     */
+    buildFeatures{
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -41,4 +49,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    /**
+     * Glide Depedency
+     * URL:- https://github.com/bumptech/glide
+     */
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 }
